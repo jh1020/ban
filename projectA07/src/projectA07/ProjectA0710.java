@@ -87,7 +87,7 @@ class MonthSchedule {
 public class ProjectA0710 {
 	
 	public static void main(String[] args) {
-		MonthSchedule
+		MonthSchedule 
 		
 	}
 }
