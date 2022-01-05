@@ -57,7 +57,7 @@ class MonthSchedule {
 			System.out.println("날짜 잘못 입력하였습니다.!");
 			return;
 		}
-		System.out.print((day+1)+ "일의 할 일은");
+		System.out.print((day+1)+ "일의 할 일은 ");
 		days[day].show();
 			
 	}
@@ -87,7 +87,8 @@ class MonthSchedule {
 public class ProjectA0710 {
 	
 	public static void main(String[] args) {
-		MonthSchedule 
+		MonthSchedule april = new MonthSchedule(30);
+		april.run();
 		
 	}
 }
