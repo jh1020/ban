@@ -366,3 +366,25 @@ Caused by: java.nio.file.FileSystemException: D:\workspace_java_01\.metadata\.lo
 
 !ENTRY org.eclipse.egit.core 4 0 2022-01-27 21:39:28.942
 !MESSAGE Deleting resources failed. See log for details
+
+!ENTRY org.eclipse.egit.core 4 0 2022-01-27 21:39:56.629
+!MESSAGE An exception occurred during push on URI https://github.com/jh1020/workspace_java.git: https://github.com/jh1020/workspace_java.git: https://github.com/jh1020/workspace_java.git/info/refs?service=git-receive-pack not found: Not Found
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: https://github.com/jh1020/workspace_java.git: https://github.com/jh1020/workspace_java.git/info/refs?service=git-receive-pack not found: Not Found
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:147)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:217)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.NoRemoteRepositoryException: https://github.com/jh1020/workspace_java.git: https://github.com/jh1020/workspace_java.git/info/refs?service=git-receive-pack not found: Not Found
+	at org.eclipse.jgit.transport.TransportHttp.createNotFoundException(TransportHttp.java:600)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:668)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:627)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:127)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1384)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:137)
+	... 4 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2022-01-27 21:39:56.629
+!MESSAGE Can't connect to any repository: https://github.com/jh1020/workspace_java.git (https://github.com/jh1020/workspace_java.git: https://github.com/jh1020/workspace_java.git/info/refs?service=git-receive-pack not found: Not Found)
