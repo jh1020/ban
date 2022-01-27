@@ -1,16 +1,15 @@
 package ProjectA1008;
 
 public class StringStack implements Stack {
-	
+
 	private String[] element;
 	private int tos;
-	
+
 	public StringStack(int capacity) {
 		element = new String[capacity];
 		tos = -1;
 	}
-	
-	
+
 	@Override
 	public int length() {
 		return tos + 1;
@@ -23,7 +22,7 @@ public class StringStack implements Stack {
 
 	@Override
 	public String pop() {
-		if(tos == -1)
+		if (tos == -1)
 			return null;
 		String s = element[tos];
 		tos--;
@@ -32,7 +31,7 @@ public class StringStack implements Stack {
 
 	@Override
 	public boolean push(String str) {
-		if(tos == element.length - 1)
+		if (tos == element.length - 1)
 			return false;
 		else {
 			tos++;
