@@ -15,23 +15,23 @@ public class AdminMenu extends AbstractMenu {
 	}
 
 	public Menu next() {
-		
+
 		switch (scanner.nextLine()) {
-		case "1" : 
+		case "1":
 			createMovie();
 			return this;
-		
+
 		case "2":
 			printAllMovies();
 			return this;
-		
-		case "3" :
+
+		case "3":
 			deleteMovie();
 			return this;
-			
+
 		case "b":
 			return prevMenu;
-			
+
 		default:
 			return this;
 		}
@@ -62,7 +62,7 @@ public class AdminMenu extends AbstractMenu {
 			System.out.println(">> 실패하였습니다.");
 		}
 	}
-	
+
 	private void deleteMovie() {
 		printAllMovies();
 		System.out.println("삭제할 영화를 선택하세요: ");
@@ -73,13 +73,5 @@ public class AdminMenu extends AbstractMenu {
 			System.out.println(">> 삭제에 실패하였습니다.");
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
