@@ -35,6 +35,9 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\workspace_java_01\mvcModel2"/>
+			<item value="D:\workspace_java_01\mvcModel"/>
+			<item value="D:\workspace_java_01\gugu"/>
 			<item value="D:\workspace_java\JavaPlzFinalProject-master"/>
 			<item value="D:\workspace_java\jdbctest"/>
 			<item value="D:\workspace_java\source (1)_4557\spring_study"/>
@@ -42,5 +45,7 @@
 			<item value="D:\workspace_java\networkpg"/>
 			<item value="D:\workspace_java\ch16"/>
 		</list>
+	</section>
+	<section name="ExternalProjectImportWizard">
 	</section>
 </section>
