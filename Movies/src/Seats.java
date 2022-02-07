@@ -19,9 +19,9 @@ public class Seats {
 	}
 
 	public void show() {
-		System.out.println("------------------");
-		System.out.println("  S  C  R  E  E  N");
-		System.out.println("------------------");
+		System.out.println("--------------------");
+		System.out.println("  S  C  R  E  E  N  ");
+		System.out.println("--------------------");
 		for (int i = 0; i < MAX_ROW; i++) {
 			System.out.printf("%c ", 'A' + i);
 			for (int j = 0; j < MAX_COL; j++) {
