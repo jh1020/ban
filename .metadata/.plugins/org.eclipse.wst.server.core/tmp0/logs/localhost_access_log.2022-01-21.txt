@@ -1,6 +1,0 @@
-127.0.0.1 - - [21/Jan/2022:18:59:25 +0900] "GET / HTTP/1.1" 404 808
-0:0:0:0:0:0:0:1 - - [21/Jan/2022:18:59:26 +0900] "GET /ProjectWeb01/Calc.html HTTP/1.1" 200 580
-0:0:0:0:0:0:0:1 - - [21/Jan/2022:18:59:26 +0900] "GET /favicon.ico HTTP/1.1" 404 819
-0:0:0:0:0:0:0:1 - - [21/Jan/2022:18:59:29 +0900] "POST /ProjectWeb01/CalcServlet HTTP/1.1" 200 120
-0:0:0:0:0:0:0:1 - - [21/Jan/2022:18:59:48 +0900] "GET /ProjectWeb01/WEB-INF/classes/CalcServlet.java HTTP/1.1" 404 722
-0:0:0:0:0:0:0:1 - - [21/Jan/2022:19:00:00 +0900] "GET /ProjectWeb01/CalcServlet HTTP/1.1" 500 1360

@@ -59,7 +59,7 @@
          AJP  Connector: /docs/config/ajp.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
-    <Connector connectionTimeout="20000" port="8081" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -135,7 +135,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="D:\workspace_java_01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\workspace_java_01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ProjectWeb01" path="/ProjectWeb01" reloadable="true" source="org.eclipse.jst.jee.server:ProjectWeb01"/><Context docBase="D:\workspace_java_01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ProjctWeb02" path="/ProjctWeb02" reloadable="true" source="org.eclipse.jst.jee.server:ProjctWeb02"/><Context docBase="D:\workspace_java_01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\spring_study" path="/spring_study" reloadable="true" source="org.eclipse.jst.jee.server:spring_study"/><Context docBase="D:\workspace_java_01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\jwbook" path="/jwbook" reloadable="true" source="org.eclipse.jst.jee.server:jwbook"/><Context docBase="D:\workspace_java_01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\mvcModel" path="/mvcModel" reloadable="true" source="org.eclipse.jst.jee.server:mvcModel"/><Context docBase="D:\workspace_java_01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\mvcModel2" path="/mvcModel2" reloadable="true" source="org.eclipse.jst.jee.server:mvcModel2"/><Context docBase="D:\workspace_java_01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\gugu" path="/gugu" reloadable="true" source="org.eclipse.jst.jee.server:gugu"/></Host>
+      <Context docBase="D:\workspace_java_01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\workspace_java_01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ProjectBBS" path="/ProjectBBS" reloadable="true" source="org.eclipse.jst.jee.server:ProjectBBS"/></Host>
     </Engine>
   </Service>
 </Server>
