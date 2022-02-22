@@ -6,14 +6,21 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="findById"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="255"/>
+			<item value="conn"/>
+			<item value="user"/>
+			<item value="LoginAction"/>
+			<item value="loginAction"/>
+			<item value="login"/>
 			<item value="findById"/>
 			<item value="&gt;&gt; 발급번호"/>
 			<item value="cancl"/>
 			<item value=""/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
