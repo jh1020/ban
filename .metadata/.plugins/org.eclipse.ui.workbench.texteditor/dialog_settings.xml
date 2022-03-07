@@ -8,24 +8,29 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value=""/>
 		<list key="findhistory">
-			<item value="255"/>
-			<item value="conn"/>
-			<item value="user"/>
-			<item value="LoginAction"/>
-			<item value="loginAction"/>
-			<item value="login"/>
-			<item value="findById"/>
-			<item value="&gt;&gt; 발급번호"/>
-			<item value="cancl"/>
-			<item value=""/>
+			<item value="mapping"/>
+			<item value="se"/>
+			<item value="ser"/>
+			<item value="serv"/>
+			<item value=".do"/>
+			<item value="or"/>
+			<item value="manu"/>
+			<item value="or "/>
+			<item value="shopping"/>
+			<item value="mainpage"/>
+			<item value="main"/>
+			<item value=".pass"/>
+			<item value="sha"/>
+			<item value="Login"/>
+			<item value="로그인"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="-196"/>
-		<item key="DIALOG_Y_ORIGIN" value="218"/>
+		<item key="DIALOG_X_ORIGIN" value="229"/>
+		<item key="DIALOG_Y_ORIGIN" value="208"/>
 		<item key="DIALOG_WIDTH" value="322"/>
 		<item key="DIALOG_HEIGHT" value="379"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
