@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="&quot;location.href=&apos;B"/>
 		<list key="findhistory">
+			<item value="&quot;Location.href=&apos;B"/>
+			<item value="&quot;Location.href"/>
 			<item value="mapping"/>
 			<item value="se"/>
 			<item value="ser"/>
@@ -21,8 +23,6 @@
 			<item value="main"/>
 			<item value=".pass"/>
 			<item value="sha"/>
-			<item value="Login"/>
-			<item value="로그인"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

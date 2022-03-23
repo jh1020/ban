@@ -13,6 +13,10 @@
 
 <style>
 
+.contentCenter{
+	left: 25%;
+	top : 15%;
+}
 
 .content{ /*컨텐츠 넓이지정*/
   position:relative;
@@ -123,7 +127,7 @@ a  {
 	</div>
 </nav> 
 
-<div class="content"> <!--전체를 감쌀 뼈대-->
+<div class="content contentCenter"> <!--전체를 감쌀 뼈대-->
 <div class="slides">  <!--슬라이드 아이템을 감쌀 뼈대-->
   <div class="slide_item"></div>  <!--슬라이드될 아이템들 -->
   <div class="slide_item"></div>
