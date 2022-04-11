@@ -1,151 +1,193 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-  <title>마스크 메인</title> 
-  <meta charset="utf-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"> 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script> 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> 
-</head> 
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>마스크 메인</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+</head>
 
 <style>
 
-.contentCenter{
-	left: 25%;
-	top : 15%;
+.brand_images_size {
+	position: fixed;
+	bottom: 0px;
+	display: flex;
+	width: 1260px;
+	margin-left: 16%;
 }
 
-.content{ /*컨텐츠 넓이지정*/
-  position:relative;
-  width:600px;
-}
-.slides { /*슬라이드 아이템이 나올 뼈대 지정*/
-  width:600px;
-  height:300px;
-  position:relative;
-
-}
-.slide_item { /*슬라이드 아이템을 absolute로 겹쳐놓고 투명하게 하기*/
-  position:absolute;
-  width:600px;
-  height:300px;
-  opacity:0;
-   transition:all 0.3s;
-}
-.ontheSlide { /*현재 아이템에 붙여줄 클래스*/
-  opacity:1;
-  transition:all 0.3s;
-}
-.ontheThumbnail { /*현재 썸네일에 붙여줄 클래스*/
-  border: 1px dashed red;
-}
-.nextButton,.prevButton { /*다음,이전 버튼을 드래그되지 않게 방지해주기*/
- -webkit-user-select: none;
--ms-user-select: none;
-user-select: none
-}
-.nextButton { /*다음 버튼을 오른쪽으로 보내기*/
-  float:right;
-}
-.prevButton{ /*왼쪽 버튼을 왼쪽으로 보내기*/
-  float:left;
-}
-.Thumbnail { /*썸네일 아이템을 감쌀 뼈대*/
-  display:flex;
-  flex-flow:row wrap;
-  width:100%;
-  height:50px;
-  position:absolute;
-  bottom:0px;
-  justify-content:center;
-}
-.slide_item:nth-of-type(1),.thumbnail_item:nth-of-type(1) { /*예제를 위해 썸네일 아이템들의 색깔을 구분*/
-  background:yellow;
-}
-.slide_item:nth-of-type(2),.thumbnail_item:nth-of-type(2) {
-  background:blue;
-}
-.slide_item:nth-of-type(3),.thumbnail_item:nth-of-type(3) {
-  background:red;
-}
-.slide_item:nth-of-type(4),.thumbnail_item:nth-of-type(4) {
-  background:orange;
-}
-.slide_item:nth-of-type(5),.thumbnail_item:nth-of-type(5) {
-  background:black;
-}
-.slide_item:nth-of-type(6),.thumbnail_item:nth-of-type(6) {
-  background:green;
-}
-.thumbnail_item { /*썸네일 아이템의 길이 설정*/
-  width:98px;
+.wrap {
+	background-color: #696969;
 }
 
 
-a  {
-   list-style:none;
-   }
+.brand_images {
+	width: 400px;
+	display: block;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.centered {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nav_link {
+	position: absolute;
+	align-content: center;
+	align-items: center;
+	transform: translateX(-100%);
+	margin-left: 55%;
+	margin-top: 10px;
+}
+
+.carousel_position {
+	position: absolute;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 25%;
+	padding-right: 25%;
+}
+
+.carousel_inner>.carousel-item>img {
+	width: 650px;
+	height: 940px;
+}
+
+.carousel_button_left {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	transform: translateX(-0%);
+}
+
+a {
+	list-style: none;
+}
 
 .innerd {
+	display: flex;
 	position: absolute;
-	top : 10%;
-	left: 50%;
-	transform: translateX(-50%);
+	top: 10%;
+	margin-left: 50%;
+	transform: translateX(-100%);
 }
 
 .loginBtn {
 	position: absolute;
-	top : 20%;
-	left: 90%;
-	transform: translateX(-50%);
+	top: 20%;
+	left: 95%;
+	transform: translateX(-100%);
 }
 </style>
 
-<body> 
-<nav  class="navbar  navbar-expand-sm bg-light" > 
-	<a class="navbar-brand" href="main.jsp" >마스크</a>
-	<a></a>
-	<div class="innerd">
-	  <ul  class="navbar-nav"> 
-	    <li  class="nav-item"> 
-	      <a class="nav-link" href="size.jsp">사이즈</a> 
-	    </li> 
-	    <li class="nav-item"> 
-	      <a class="nav-link" href="color.jsp">색상</a> 
-	    </li> 
-	    <li class="nav-item"> 
-	      <a class="nav-link" href="func.jsp">기능</a>
-	    </li> 
-	  </ul>
+<body>
+<table id="wrap" role="main">
+	<nav class="navbar  navbar-expand-sm container_navbar">
+		<a class="navbar-brand" href="main.jsp">마스크</a>
+		<div class="navbar nav_link">
+			<ul style="display: flex; list-style: none;">
+				<li class="nav-item"><a class="nav-link" href="size.jsp">사이즈</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="color.jsp">색상</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="func.jsp">기능</a>
+				</li>
+			</ul>
+		</div>
+		<div class="loginBtn navbar-nav ">
+			<input type="button" value="로그인" id="login"
+				onclick="location.href='login.jsp'" /> <input type="button"
+				value="회원가입" id="signUpBtn" onclick="location.href='signUp.jsp'" />
+		</div>
+	</nav>
+<div>
+	<div class="carousel_position">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"></script>
+		<script> $('.carousel').carousel({ interval: 2000 //기본 5초 }) </script>
+		<div class="container"></div>
+		<div id="demo" class="carousel slide" data-ride="carousel"
+			align="center">
+			<div class="carousel-inner">
+				<!-- 슬라이드 쇼 -->
+				<div class="carousel-item active">
+					<!--가로-->
+					<img class="d-block w-100"
+						src="https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+						alt="First slide">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>TEST</h5>
+						<p>testtesttest</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100"
+						src="https://images.pexels.com/photos/2355519/pexels-photo-2355519.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=650&w=940"
+						alt="Second slide">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100"
+						src="https://images.pexels.com/photos/2544554/pexels-photo-2544554.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+						alt="Third slide">
+				</div>
+				<!-- / 슬라이드 쇼 끝 -->
+				<!-- 왼쪽 오른쪽 화살표 버튼 -->
+				<a class="carousel-control-prev carousel_button_left" href="#demo"
+					data-slide="prev"> <span class="carousel-control-prev-icon"
+					aria-hidden="true"></span> <!-- <span>Previous</span> -->
+				</a> <a class="carousel-control-next" href="#demo" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<!-- <span>Next</span> -->
+				</a>
+				<!-- / 화살표 버튼 끝 -->
+				<!-- 인디케이터 -->
+				<ul class="carousel-indicators">
+					<li data-target="#demo" data-slide-to="0" class="active"></li>
+					<!--0번부터시작-->
+					<li data-target="#demo" data-slide-to="1"></li>
+					<li data-target="#demo" data-slide-to="2"></li>
+				</ul>
+				<!-- 인디케이터 끝 -->
+			</div>
+		</div>
 	</div>
-	<div class="loginBtn navbar-nav ">
-			<input type="button" value="로그인" id="login" onclick="location.href='login.jsp'" />
-			<input type="button" value="회원가입" id="signUpBtn" onclick="location.href='signUp.jsp'"/>
-	</div>
-</nav> 
+	
+		<div class="brand_images_size">
+			<a href="brand1.jsp" class="brand_images"> <img
+				src="images/brand1.png" height="200px" width="400px" alt="brand1">
+			</a> <a href="brand2.jsp" class="brand_images"> <img
+				src="images/brand2.png" height="200px" width="400px" alt="brand2">
+			</a> <a href="brand3.jsp" class="brand_images"> <img
+				src="images/brand3.png" height="200px" width="400px" alt="brand3">
+			</a>
+		</div>
+</table>
 
-<div class="content contentCenter"> <!--전체를 감쌀 뼈대-->
-<div class="slides">  <!--슬라이드 아이템을 감쌀 뼈대-->
-  <div class="slide_item"></div>  <!--슬라이드될 아이템들 -->
-  <div class="slide_item"></div>
-  <div class="slide_item"></div>
-  <div class="slide_item"></div>
-  <div class="slide_item"></div>
-  <div class="slide_item"></div>
-</div>
-<span class="nextButton">▶</span>  <!--다음 버튼 -->
-<span class="prevButton">◀</span>   <!--이전 버튼 -->
-  <div class="Thumbnail">  <!--썸네일을 감쌀 뼈대 -->
- <div class="thumbnail_item"></div>   <!--썸네일 아이템들 -->
-  <div class="thumbnail_item"></div>
-  <div class="thumbnail_item"></div>
-  <div class="thumbnail_item"></div>
-  <div class="thumbnail_item"></div>
-  <div class="thumbnail_item"></div>
-  </div> 
-</div>
-</body> 
+</body>
 </html>
