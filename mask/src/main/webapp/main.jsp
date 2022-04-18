@@ -22,11 +22,12 @@
 <style>
 
 .brand_images_size {
-	position: fixed;
+	position: absolute;
 	bottom: 0px;
 	display: flex;
-	width: 1260px;
+	width: auto;
 	margin-left: 16%;
+	margin-right: 16%;
 }
 
 .wrap {
